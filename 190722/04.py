@@ -8,5 +8,5 @@ li = []
 for i in nl:
     li.append(int(i))    
 li = sorted(li)
-print(divmod(5,2))
-print(li[divmod(n,2)])
+
+print(li[divmod(n,2)[0]])
