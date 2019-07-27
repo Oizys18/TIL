@@ -39,10 +39,7 @@
 - tkinter
 - curses
 - datetime
-- Pillow (PIL)
-	- Image
 - io
-- PySimpleGUI
 ```
 
 ```
@@ -52,5 +49,15 @@
 - random
 - math
 - sys
+```
+
+#### 연습용
+
+```
+- PySimpleGUI
+- Pillow (PIL)
+	- Image
+- tcod (libtcod)
+
 ```
 
