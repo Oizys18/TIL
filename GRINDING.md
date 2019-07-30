@@ -3,14 +3,20 @@
 ## Coding Practice Plan
 
 #### Python 3x : Main Language *집중*
-  - Algorithm
 ```
 1. 생활코딩 Ruby & Python 강의 듣기
 2. Python MooC 강의 듣기 
-4. 정규표현식 공부 **최우선 
+3. 정규표현식 공부 **최우선 
 ```
+#### HTML/CSS 
+```
+1. Idle page 만들기
+2. Portfolio Github.io page 만들기
+```
+
 #### Not yet
 - SQL / SPARK
+- Ruby
 - C
 - Java
 
@@ -25,24 +31,26 @@
 - PokeAPI : https://pokeapi.co/
 ```
 
-## 사용 / 설치 Module
+## 사용 Library / Module
 
-#### 공부용
-
+### 사용
 ```
-# 외장
+- Pandas
 - Numpy
 - Pandas
 - Flask
 - pprint
 - tkinter
 - curses
+- PySimpleGUI
+- Pillow (PIL)
+	- Image
+- tcod (libtcod)
+- django
+```
+```
 - datetime
 - io
-```
-
-```
-# 내장
 - base64
 - requests
 - random
@@ -50,13 +58,11 @@
 - sys
 ```
 
-#### 연습용
-
+- 공부할 것 
 ```
-- PySimpleGUI
-- Pillow (PIL)
-	- Image
-- tcod (libtcod)
-
+- SciPy
+- TensorFlow
+- SciKit-Learn
+- Keras
+- Gamepy
 ```
-
