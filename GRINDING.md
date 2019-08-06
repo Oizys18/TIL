@@ -47,6 +47,8 @@
 	- Image
 - tcod (libtcod)
 - django
+- beautifulsoup4
+- selenium
 ```
 ```
 - datetime
