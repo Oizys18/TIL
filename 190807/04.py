@@ -4,59 +4,61 @@
 
 import sys
 sys.stdin = open('input.txt', 'r')
-oriMat = []
-resMat = [[0]*5 for i in range(5)]
-for i in range(5):
-    oriMat.append(list(map(int,(input().split()))))
 
-print(oriMat)
-# print(resMat)
+for m in range(int(input())):
+    N = int(input())
+    oriMat = []
+    resMat = [[0]*N for i in range(N)]
+    for i in range(N):
+        oriMat.append(list(map(int,(input().split()))))
 
-cur_x = 0
-cur_y = 0
-# def isWall(a):
-#   len(a) = 5 (0~4)
-# dx = [0,0,-1,1]
-# dy = [-1,1,0,0]
-dx = 1
-dy = 0
-# print(len(oriMat))
-# print(len(oriMat[0]))
-for y in range(len(oriMat)): # 0 1 2 3 4 
-    for x in range(len(oriMat[y])): # 0 1 2 3 4
-        # print(x)
-        # print(dx,dy)
-        cur_x = cur_x + dx
-        cur_y = cur_y + dy
-        # print(cur_x, cur_y)
-        # print(cur_x,cur_y)
-        print(oriMat[cur_y][cur_x]) # 
-        if cur_x == len(oriMat[y])-1 and cur_y == len(oriMat)-1:
-            dx = -1
-            dy = 0
-            # print('hi',dx,dy)
-            continue
-        if cur_x == 0 and cur_y == len(oriMat)-1:
-            dx = 0
-            dy = -1
-        if cur_x == len(oriMat[y])-1:
-            dy = 1 
-            dx = 0
+    def miniSelect(a):
+        mini = a[0][0]
+        m_i,m_j = 0, 0
+        for i in range(len(a)):
+            for j in range(len(a[i])):
+                if a[i][j] < mini:
+                    mini = a[i][j]
+                    m_i, m_j = i, j 
+        return mini, m_i, m_j
 
-        #     continue
-        # if x == len(oriMat)-1 and y == len(oriMat[x])-1:
-        #     dx = -1
-        #     dy = 0 
-        #     continue
-        # if x == 0 and y == len(oriMat)-1:
-        #     dx = 0
-        #     dy = -1
-        #     continue
-        
-        # if x == len(oriMat[y])-1:
-        #     dy = 1
-        #     dx = 0
-        
+    def isWall(a,x,y,cur_dr):
+        dx,dy = Move(cur_dr)
+        if x+dx > len(a)-1 or y +dy > len(a)-1:
+            return True
+        else: 
+            if a[y+dy][x+dx] != 0: return True
+            else: return False
 
+    def Move(cur_dr):
+        dr = [(1,0),(0,1),(-1,0),(0,-1)]
+        return dr[cur_dr]
 
-# def move(a):
+    def printIt(a):
+        for i in range(len(a)):
+            print(a[i])
+
+    #현재 x,y좌표, 현재 방향 
+    cur_x,cur_y,cur_dr = 0, 0, 0
+    for y in range(len(oriMat)): 
+        for x in range(len(oriMat[y])): 
+            #시작점 (0,0) 인쇄
+            if x == 0 and y == 0:
+                mini = miniSelect(oriMat)
+                resMat[cur_y][cur_x] = mini[0]
+                oriMat[mini[1]][mini[2]] = 99
+                continue
+            # 만약 다음 경로에 이미 숫자가 들어있거나 범위를 벗어날 경우
+            if isWall(resMat,cur_x,cur_y,cur_dr):
+                if cur_dr == 3:
+                    cur_dr = 0
+                else: 
+                    cur_dr += 1
+            dx,dy = Move(cur_dr)
+            cur_x += dx
+            cur_y += dy
+            mini = miniSelect(oriMat)
+            resMat[cur_y][cur_x] = mini[0]
+            oriMat[mini[1]][mini[2]] = 99
+    printIt(resMat)
+
