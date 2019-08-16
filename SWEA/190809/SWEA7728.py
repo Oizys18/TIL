@@ -7,3 +7,4 @@ for T in range(int(input())):
     set_w = set([int(w) for w in word])
     print("#{0} {1}".format(T+1,len(set_w)))
 
+ 
