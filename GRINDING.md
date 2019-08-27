@@ -1,6 +1,4 @@
-# GRINDING 
-
-## Coding Practice Plan
+# Coding Practice Plan
 
 #### Python 3x : Main Language *집중*
 ```
