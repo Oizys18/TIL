@@ -14,6 +14,26 @@ N일 동안 동아리 활동을 할 수 있는 경우의 수를 출력
 
 """
 
+
+"""
+logic 
+
+A : B/C/D 
+
+B : A/C/D
+
+C : A/B/D
+
+... 
+D : 0 
+
+1 : A / D  : AD ABD ACD ABCD  -> 첫날은 무조건 4가지 (앞/뒤가 정해지면)
+2 : D / B  : DB DAB DCB DACB  -> n날도 무조건 4가지 (앞/뒤가 정해지면)
+3 : B      : B BA BC BD BAC BCD BAD  ////마지막 : 
+/// BACD: 마지막 맨 앞에 누가 와도 됨
+"""
 import sys
 sys.stdin = open('input.txt','r')
 
+for T in range(int(input())):
+    line = input()
