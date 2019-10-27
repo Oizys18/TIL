@@ -5,11 +5,13 @@
 1. 생활코딩 Ruby & Python 강의 듣기
 2. Python MooC 강의 듣기 
 3. 정규표현식 공부 **최우선 
+4. Google cloud API Machine Learning  
 ```
 #### HTML/CSS 
 ```
 1. Idle page 만들기
 2. Portfolio Github.io page 만들기
+3. Girok 서비스 런칭 
 ```
 
 #### Not yet
@@ -65,4 +67,6 @@
 - SciKit-Learn
 - Keras
 - Gamepy
+- Numpy
+- TensorFlow
 ```
