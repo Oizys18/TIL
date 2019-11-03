@@ -4,8 +4,6 @@
 
 `https://wayhome25.github.io/django/2017/03/20/django-ep5-model/`
 
-
-
 - 장점
 
 ```
@@ -42,76 +40,44 @@ Project
  - app3 : 영화평점
 ```
 
-![1565577716118](C:\Users\student\AppData\Roaming\Typora\typora-user-images\1565577716118.png)
+## 상식
 
-## Django project
-
-```
-project 생성:
-생성할 directory에서 git bash 명령 
-
-$ django-admin startproject first_app .
-
-# first_app 이라는 프로젝트를 '.'현재 디렉토리에 생성 
-# django-admin startproject <프로젝트이름> <경로>
-```
+- Scrimba
 
 ```
-폴더구조 >> 대문자 구분폴더 속에 구분폴더와 동일한 이름의 프로젝트명을 소문자로 생성한다. 
+- https://scrimba.com/
+  HTML/CSS 등 코딩 연습 
+  사이트에서 바로 실행 및 연습 가능 
 ```
 
-```
-서버 구동: git bash
-$ python manage.py runserver
-```
+### `Shell embed function`
+
+- embed() 호출을 통해 쉬운 디버깅
+- Ipython을 통해 사용 가능 : `from IPython import embed`
+- https://stackoverflow.com/questions/45014239/how-to-embed-python-console-like-pythonanywhere-in-django-website
+
+- `embed()` 사용
+
+1. `views.py`에 `from IPython import embed`
+
+2. `settings.py`의 `INSTALLED_APPS` : `'django_extensions'` 등록
+
+3. `views.py`의 함수 중간에 `embed()` 코드라인 삽입
+
+4. `runserver`후 함수 실행시 Ipython shell 자동 실행
+   - 실행된 Ipython에서 `form` 입력 시 현재시점까지 `form`에 있는 값이 나옴 
+   - `request.POST` 작성 시 현재 QueryDict에 들어있는 값이 저장되어있음  
+   - `form.is_valid()`등 으로 값의 유효성도 판별 가능 
+
+### `ORM` : Object-Relational Mapping
 
 ```
-app 생성:
-$python manage.py startapp <앱 이름>
-```
+- DB의 행,테이블도 객체로 취급 
 
-- urls.py
-
-```
-#url(주문서) 관리
-
-urlpatterns = [
-	# path()
-    # 첫번째 인자 : 주문서(url)경로
-    # 두번째 인자 : view 함수의 위치
-    path('index/', pages.index)
-]
-```
-
-- views.py
-
-```
-함수 관리
-```
-
-- app 추가
-
-```python
-#url.py "path('index/', views.index)," 수정 > 
-#settings.py 에서 'INSTALLED_APPS 최상단에 앱 추가' > 
-#urls.py에서 'from 앱이름 import views' > 
-#pages/views.py에서 
-
-def index(request):
-    return render(request, 'index.html')
-
-    
-```
-
-- HttpResponse 확인 : views.py
-
-```python
-from django.http import HttpResponse
-def home (request):
-    return HttpResponse()
-
-* django Documnetation 확인 
-* django library에서 내장된 http 클래스 중 HttpResponse 끌어오는 것이다. 
+  "Object-Relational-Mapping 은 객체 지향 프로그래밍 언어를 사용하
+  여 호환되지 않는 유형의 시스템간에(Django - SQL)데이터를 변환하는
+  프로그래밍 기술이다. 이것은 프로그래밍 언어에서 사용할 수 있는 '가상
+  객체 데이터베이스'를 만들어 사용한다.”
 ```
 
 ### DTL
@@ -129,7 +95,7 @@ datetime
  - Y / m / d / H / i
 ```
 
-## Template Inheritance 
+### Template Inheritance 
 
 - 공통적으로 쓸 템플릿을 서로 다른 페이지에서 모두 공유하도록 하는 것 
 - 모두 공통적으로 적용해야할 Navbar 등에 사용가능 
@@ -173,40 +139,77 @@ import os 후 사용하면
 경로 보여줌  
 ```
 
-
-
-
-
-# 0819
-
-### 뽀시래기
-
-1. 앱 이름은 가능한 복수형으로 작성할 것 
-
-### 도메인 요청 허용
+## 기본 `Django project` 
 
 ```
-Django는 요청에 대한 응답을 할 때, 기본적으로 허용된 도메인으로부터 온 요청에
-한해서만 응답을 하도록 설정되어 있다. settings.py 파일에서 특정 도메인을 허용하기
-위해 수정해야 하는 변수명을 찾아 작성하시오. : ALLOWED_HOSTS
+project 생성:
+생성할 directory에서 git bash 명령 
+
+$ django-admin startproject first_app .
+
+# first_app 이라는 프로젝트를 '.'현재 디렉토리에 생성 
+# django-admin startproject <프로젝트이름> <경로>
 ```
 
 ```
-https://www.tuwlab.com/ece/26571
+폴더구조 >> 대문자 구분폴더 속에 구분폴더와 동일한 이름의 프로젝트명을 소문자로 생성한다. 
 ```
 
-![1566173590310](C:\Users\student\AppData\Roaming\Typora\typora-user-images\1566173590310.png)
-
-### Scrimba
-
 ```
-https://scrimba.com/
-HTML/CSS 등 코딩 연습 
-사이트에서 바로 실행 및 연습 가능 
-
+서버 구동: git bash
+$ python manage.py runserver
 ```
 
-## DB
+```
+app 생성:
+$python manage.py startapp <앱 이름>
+```
+
+- `urls.py`
+
+```
+#url(주문서) 관리
+
+urlpatterns = [
+	# path()
+    # 첫번째 인자 : 주문서(url)경로
+    # 두번째 인자 : view 함수의 위치
+    path('index/', pages.index)
+]
+```
+
+- `views.py`
+
+```
+함수 관리
+```
+
+- app 추가
+
+```python
+#url.py "path('index/', views.index)," 수정 > 
+#settings.py 에서 'INSTALLED_APPS 최상단에 앱 추가' > 
+#urls.py에서 'from 앱이름 import views' > 
+#pages/views.py에서 
+
+def index(request):
+    return render(request, 'index.html')
+
+    
+```
+
+- HttpResponse 확인 : `views.py`
+
+```python
+from django.http import HttpResponse
+def home (request):
+    return HttpResponse()
+
+* django Documnetation 확인 
+* django library에서 내장된 http 클래스 중 HttpResponse 끌어오는 것이다. 
+```
+
+## Django: DB
 
 ### RDBMS 관계형 DB관리 
 
@@ -215,24 +218,12 @@ Oracle, AWS redshift, excel 등
 행/열 데이터 묶음 
 ```
 
-### ORM : Object-Relational Mapping
+- `Django`: `settings.py` 의 Database
+  - 자동으로 db.sqlite3 생성 : SQL lite 
+  - App -> models.py 
+  - 데이터 레코드, 테이블을 객체로 : 클래스로! 
+  - `https://inloop.github.io/sqlite-viewer/` : sqlite viewer 
 
-```
-DB의 행,테이블도 객체로 취급 
-
-"Object-Relational-Mapping 은 객체 지향 프로그래밍 언어를 사용하
-여 호환되지 않는 유형의 시스템간에(Django - SQL)데이터를 변환하는
-프로그래밍 기술이다. 이것은 프로그래밍 언어에서 사용할 수 있는 '가상
-객체 데이터베이스'를 만들어 사용한다.”
-```
-
-### Django settings.py 의 Database
-
-- 자동으로 db.sqlite3 생성 : SQL lite 
-- App -> models.py 
-- 데이터 레코드, 테이블을 객체로 : 클래스로! 
-
-`https://inloop.github.io/sqlite-viewer/` : sqlite viewer 
 
 ### Migration
 
@@ -281,9 +272,9 @@ from .models import Article
 admin.site.register(Article)
 ```
 
-# 0820
+## Practice Projects
 
-## CRUD
+### `PJT: CRUD`
 
 - workflow
 
@@ -295,7 +286,7 @@ admin.site.register(Article)
  - template 
 ```
 
-- base html
+- `base.html`
 
 ```
 TEMPLATES = [
@@ -317,7 +308,7 @@ TEMPLATES = [
 settings.py TEMPLATES 수정 
 ```
 
-- _nav
+- `_nav`
 
 ```
 <a class="nav-link" href="{% url 'post:new' %}">새글쓰기</a>
@@ -332,11 +323,9 @@ settings.py TEMPLATES 수정
 즉 이전 글의 아이디가 5라면 모든 글을 삭제하고 새로 생성해도 id는 6부터 생성됨. 
 ```
 
-# 0911
+### `PJT: WUNDERLIST`
 
-## WUNDERLIST
-
-### views.py 함수 기능 합치기
+- `views.py` 함수 기능 합치기
 
 ```python
 # new()와 create()는 선형적으로 작동이 연결되어있음 
@@ -353,14 +342,14 @@ def create(request):
         return redirect('todos:index')
 ```
 
-# 1014- 1015
 
-## Form Class
+
+## `Form Class`
 
 - Form 클래스를 통해 새로운 문서작성을 위한 페이지를 쉽게 작성할 수 있다. 
 - input 등을 쉽게 만들 수 있음, bootstrap을 사용해 바로 작성 가능
 
-## 주요역할 (custom form class)
+### 주요역할 (custom form class)
 
 - 입력폼 html 생성 : as_table(), as_p(), as_ul() 기본 제공
 - 입력폼 값 검증 (validation)
@@ -378,30 +367,7 @@ https://docs.djangoproject.com/en/2.2/ref/forms/api/#django.forms.Form
 
 https://wayhome25.github.io/django/2017/05/06/django-form/
 
-
-
-## Shell embed function
-
-- Ipython을 통해 사용 가능 
-- `from IPython import embed`
-- https://stackoverflow.com/questions/45014239/how-to-embed-python-console-like-pythonanywhere-in-django-website
-
-1. `views.py`에 `from IPython import embed`
-
-2. `settings.py`의 `INSTALLED_APPS` : `'django_extensions'` 등록
-
-3. `views.py`의 함수 중간에 `embed()` 코드라인 삽입
-
-4. `runserver`후 함수 실행시 Ipython shell 자동 실행
-
-   - 실행된 Ipython에서 `form` 입력 시 현재시점까지 `form`에 있는 값이 나옴 
-
-   - `request.POST` 작성 시 현재 QueryDict에 들어있는 값이 저장되어있음  
-   - `form.is_valid()`등 으로 값의 유효성도 판별 가능 
-
-
-
-## Forms Widget
+### Forms Widget
 
 - Form의 속성값을 수정가능
 
@@ -432,11 +398,7 @@ class ArticleForm(forms.Form):
 # 각 항목의 Field에서 widget과 attrs를 사용한다.
 ```
 
-
-
-
-
-## Form vs Model Form (폼과 모델폼의 차이점)
+### Form vs Model Form (폼과 모델폼의 차이점)
 
 - Form (일반 폼) : 직접 필드 정의, 위젯 설정이 필요
 - Model Form (모델 폼) : 모델과 필드를 지정하면 모델폼이 자동으로 폼 필드를 생성
@@ -459,22 +421,15 @@ class PostForm(forms.ModelForm):
 
 [초보몽키 https://wayhome25.github.io/django/2017/05/06/django-form/]
 
-
-
-
-
-## VIEW DECORATOR DJANGO
-
-https://docs.djangoproject.com/en/2.2/topics/http/decorators/
-
-## FORM COMMENT
+### Form Comment
 
 https://opentutorials.org/module/4034/24999
 
-# Error code
 
-- 404 : 없는 페이지
-- 405 : method not found (post써야하는데 get을 통해 보냈다던가.. )
+
+
+
+
 
 
 

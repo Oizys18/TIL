@@ -419,4 +419,3 @@ $ git config --global --credential.helper
 * 관리자 권한 필요
 ```
 
-- 
