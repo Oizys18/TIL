@@ -1,18 +1,41 @@
 # Vue.js
 
--  https://kr.vuejs.org/v2/guide/index.html 
--  [Vue.js 창작자 Evan You 인터뷰](http://blog.naver.com/PostView.nhn?blogId=fastcampus&logNo=220969253285&refer=개발자스럽다)
--  https://medium.com/hivelab-dev/vue-js-spa-tutorial-part1-d74aca1bba58 
+- https://kr.vuejs.org/v2/guide/index.html 
+
+- [Vue.js 창작자 Evan You 인터뷰](http://blog.naver.com/PostView.nhn?blogId=fastcampus&logNo=220969253285&refer=개발자스럽다)
+
+- https://medium.com/hivelab-dev/vue-js-spa-tutorial-part1-d74aca1bba58 
 
 - JS를 사용하는 이유? Browser에서 (html page의) `Client Side Rendering`을 하기 위함. 
   - 새로운 페이지 로드 없이 현 페이지에서 Render 
   - 근본적으로 UX의 극대화를 위해서이다. 
+  
 - Django의 Rendering은 `Server Side Rendering`
+  
   - Request와 Response의 구조
+  
 - `SPA`: Single Page Application: 한 페이지에서 지속적으로 렌더
+  
   - Vue.js
   - Angular.js
   - React.js 
+  
+-  VScode extensions
+
+   -  Vetur
+   -  Vue VSCode Snippets
+
+-  VSCODE Vue파일 tab:2 설정 : `ctrl + shift + p` > `settings.json` 추가 
+
+   -  ```
+      "[vue]": {
+              "editor.tabSize": 2
+          } 
+      ```
+
+   -  vscode 윈도우 우측 하단 spaces:2로 설정 
+
+-   https://ovenapp.io/ 
 
 ## 상식
 
@@ -118,6 +141,36 @@ const app = new Vue({
 <p v-text></p>
 <p v-show></p>
 ```
+
+
+
+## Vue-CLI
+
+- `Django-admin` 처럼 `Vue`를 CLI에서 조작 가능 
+- npm을 이용한 설치 (`yarn`사용 가능) 
+
+  - 전역: ` npm install -g @vue/cli `
+  - 프로젝트 단위  -  default 
+    - `vue --version`
+- 프로젝트 디렉토리 생성
+  - ` vue create todo-vue-cli`
+  - ?  Your connection to the default npm registry seems to be slow.
+    Use https://registry.npm.taobao.org for faster installation? Yes
+    - 미국에서 제작했기 때문에 중국 타오바오 서버를 통해 빠른 속도로 만들어줌 - `Yes`
+  - preset은 `default`
+- 프로젝트 톺아보기
+
+  - `babel.config.js`
+    - 오래된 브라우저가 새로운 언어/기능을 이해못하면 자동으로 번역(?)해줌 
+
+  - `package.json`
+    - 프로젝트에서 사용되는 패키지들 관련 정보
+  - `node_modules`
+    - 실제 패키지
+
+- 위와 같이 실제 프로젝트에 필요한 데이터는 많은데 (88mb..) 실제 배포 시에는 `build`를 통해 컴파일한다.
+
+  - 그래서 만약 다른 사람의 코드를 받아서 사용하려면 처음 저장 후 `npm install`해야함 
 
 #  00_vuejs_intro
 
@@ -246,6 +299,8 @@ const app = new Vue({
   - ```
     :class="{completed:false}"
     
+    ```
+
 이후 method에서 조건 추가한 function 적용한다.
     ```
     
@@ -310,8 +365,6 @@ const app = new Vue({
     ```
 
 ## 02_vue_practice.html
-
-
 
 # 01_vuejs_component
 
@@ -382,14 +435,29 @@ Vue 컴포넌트는 Vue 인스턴스이기도 합니다. 그러므로 모든 옵
               }
   		}
   	}
-  }
+  }``
   ```
 
   1. `templates`와 같은 레벨에 ` props` 추가
   2.  `template: '<span>{{ 정의한 props }}</span>' `삽입
   3.  `<compoName message="안녕하세요!"></compoName>` 각 컴포넌트에서 지정
 
-  
+
+### Single File Component
+
+- `<filename>.vue` 파일
 
 ## 01_todo_component.html
+
+
+
+
+
+
+
+
+
+
+
+
 
