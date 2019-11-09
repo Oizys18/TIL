@@ -14,7 +14,12 @@
 3. Girok 서비스 런칭 
 ```
 
-#### Javascript (Node.js)
+#### Javascript 
+
+```
+1. Vue.js SPA 만들기 
+2. Vue component 공부
+```
 
 ## 사용해본 API
 ```
@@ -25,9 +30,10 @@
 - Naver Papago NMT(Neural Machine Translation) : https://developers.naver.com/products/nmt/
 - Giphy : https://developers.giphy.com/
 - PokeAPI : https://pokeapi.co/
+- Youtube Data API
 ```
 
-## 사용 Library / Module
+## 사용 Library / Module - (Python)
 
 ### 사용
 ```

@@ -11,10 +11,10 @@
 ## 01_Web
 
 - HTML & CSS
-
 - Django
-
 - Javascript
+  - Vue
+  - Node.js
 
 ## DOCS
 
