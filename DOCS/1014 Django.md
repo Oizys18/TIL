@@ -15,7 +15,8 @@
   - 모바일 시대에 유행
   - **NoSQL** 데이터베이스는 전통적인 [관계형 데이터베이스](https://ko.wikipedia.org/wiki/관계형_데이터베이스) 보다 덜 제한적인 [일관성 모델](https://ko.wikipedia.org/w/index.php?title=일관성_모델&action=edit&redlink=1)을 이용하는 데이터의 저장 및 검색을 위한 매커니즘을 제공한다.
 - MERN: MongoDB, ExpressJS, ReactJS, Node.js   // 프로그래밍 스택 / 웹 개발
-- 
+
+  
 
 ### TDD : Test driven development
 
