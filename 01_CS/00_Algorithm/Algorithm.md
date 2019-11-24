@@ -2,8 +2,6 @@
 
  https://velog.io/@doontagi 
 
-1. 
-
 # Problem Solving
 
 1. Brute force
@@ -16,6 +14,10 @@
 - Python sample code 
 
 ## Bit
+
+- 비트 체크를 통해 
+
+- 부분집합 구하기 
 
 ```python
 # array의 부분집합의 합이 0인 경우를 모두 찾아내는 코드 

@@ -153,6 +153,8 @@ const app = new Vue({
   - 프로젝트 단위  -  default 
     - `vue --version`
 - 프로젝트 디렉토리 생성
+  -  `vue init <template-name> <project-name>`
+    vue init webpack my-project 
   - ` vue create todo-vue-cli`
   - ?  Your connection to the default npm registry seems to be slow.
     Use https://registry.npm.taobao.org for faster installation? Yes
@@ -167,7 +169,6 @@ const app = new Vue({
     - 프로젝트에서 사용되는 패키지들 관련 정보
   - `node_modules`
     - 실제 패키지
-
 - 위와 같이 실제 프로젝트에 필요한 데이터는 많은데 (88mb..) 실제 배포 시에는 `build`를 통해 컴파일한다.
 
   - 그래서 만약 다른 사람의 코드를 받아서 사용하려면 처음 저장 후 `npm install`해야함 

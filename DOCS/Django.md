@@ -644,10 +644,12 @@ https://docs.djangoproject.com/en/2.2/topics/auth/ 				#Django Documentation
 - #### User에 대한 CRUD: https://github.com/django/django/tree/master/django
 
 - `django.contrib.auth.models.py` : `class User` < `class AbstractUser` < `class AbstractBaseUser`
-  - Documentation을 확인하면 세부사항별로 모듈화되어있다. 
-
+  
+- Documentation을 확인하면 세부사항별로 모듈화되어있다. 
+  
 - `forms.py` 의  UserCreationForms (model form)을 사용한다.
 - `UserCreationForms`: user creation을 위한 여러 preset ModelForm 기능이 있다.
+  
   - validation check ->is_valid False일 때 flash message() 생성 및 redirection
 
 
@@ -968,7 +970,7 @@ https://brownbears.tistory.com/63
 
 
 
-## Gravatar : 글 작성 시 아바타 달기
+## Json 데이터 로드 및 dump
 
 https://ko.gravatar.com/
 

@@ -188,8 +188,10 @@ $ git cherry-pick -n <commit>
 #### - `merge`
 
 ```bash
-# 다른 브랜치를 현재 브랜치로 합치기
-$ git merge <branch>
+# 현재 브랜치에서 다른 브랜치와의 diff를 확인하고 합친다. 
+$ git checkout <끌어올 브랜치> 
+$ git merge <따라갈 브랜치>
+$ git push 
 
 # 커밋하지 않고 합치기
 $ git merge --no-commit <branch>
@@ -417,5 +419,12 @@ $ git config --system --unset credential.helper
 $ git config --global --credential.helper
 - credential 정보를 리셋해주는 코드 
 * 관리자 권한 필요
+```
+
+- can't find repository <~~~>
+
+```
+- credential error : config에 저장된 id 값이 해당 원격저장소를 볼 수 있는 권한이 없음
+
 ```
 
