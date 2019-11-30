@@ -209,22 +209,27 @@ $ python manage.py collectstatic
 - `$ firebase init`
   - app의 root directory 에서 실행한다.
 
-1. firebase로 할 수 있는 작업목록 중 `Hosting` 선택
-   - `space`가 선택이고 `Enter`가 확정이다.
+a. firebase로 할 수 있는 작업목록 중 `Hosting` 선택
+ - `space`가 선택이고 `Enter`가 확정이다.
 
-2. Create new project 또는 Use existing project
-   - 연결할 새로운 서버를 생성하거나 이미 존재하는 서버를 설정한다.
+b. Create new project 또는 Use existing project
+ - 연결할 새로운 서버를 생성하거나 이미 존재하는 서버를 설정한다.
 
-3. Public directory 설정
+c. Public directory 설정
 
-   - 공개용 루트 디렉토리로 사용할 곳을 지정.
+ - 공개용 루트 디렉토리로 사용할 곳을 지정.
 
-   - Compile된 배포용 파일(index.html)이 생성될 디렉토리로 설정한다.
-   - 보통 `dist` 를 사용해서 자동으로 새로운 폴더를 생성하게 한다.
+ - Compile된 배포용 파일(index.html)이 생성될 디렉토리로 설정한다.
+ - 보통 `dist` 를 사용해서 자동으로 새로운 폴더를 생성하게 한다.
 
-4. URL 구성을 선택한다.
-   - `vue-router`를 사용하는 SPA의 경우 Y를 선택한다.
-   - firebase가 index.html에 URL을 모두 모아서 입력한다.
+d. SPA: URL 구성을 선택한다.
+ - `vue-router`를 사용하는 SPA의 경우 Y를 선택한다.
+ - firebase가 index.html에 URL을 모두 모아서 입력한다.
+
+e. `.gitignore`에 firebase 관련 파일 추가
+- 초기화가 끝나면 두 개의 파일이 자동 생성된다. 아래 두 파일을 git 예외처리한다.
+  - `firebase.json` : 프로젝트 구성을 나열
+  - `.firebaserc` : 프로젝트 별칭을 저장
 
 #### 3. Compile
 
