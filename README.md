@@ -8,13 +8,23 @@
 
 - `Flask`, `webbrowsing`, `dynamic server`, `Telegram chatbot`
 
-## 01_Web
+## 01_CS
 
-- HTML & CSS
-- Django
-- Javascript
-  - Vue
-  - Node.js
+- 00_Algorithm
+- 01_Datastructure
+- 02_Database
+
+## 02_Language
+
+- 00_Python
+- 01_Javascript
+
+## 03_Web
+
+- 00_HTML & CSS
+- 01_Django
+- 02_VUEJS
+- 03_Jekyll
 
 ## DOCS
 
