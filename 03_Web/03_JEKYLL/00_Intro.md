@@ -3,10 +3,13 @@
 ## 개요
 
 - Jekyll ? 
+  - 텍스트 변환 엔진
   - Github pages 의 내부 엔진 -> Github 서버 무료 호스팅 가능
   - 정적 웹사이트 생성기
   - Markdown 파일로 컨텐츠 작성 + Liquid 기능이 추가된 HTML 템플릿 사용
   - Ruby Gem의 하나
+  - 템플릿 처리 작업을 위해 `Liquid` 템플릿 언어 사용
+    - https://shopify.github.io/liquid/
 
 ### 목표
 
@@ -17,6 +20,8 @@
 ### 준비
 
 Windows는 공식적으로 지원되는 플랫폼이 아니다. 정상작동을 위해 준비물이 있다.
+
+**주의**: windows 환경에서 UTF-8 인코딩 사용 시 파일에 `BOM` 헤더 문자가 있으면 안된다.
 
 - 작업 환경
 
@@ -100,7 +105,7 @@ Make: GNU Make 4.2.1
 
 - `jekyll -v` 버전 확인
 
-
+<hr>
 
 ## 새  Jekyll 사이트 생성
 
@@ -121,3 +126,38 @@ bundle exec jekyll serve
 
 ![image-20191203214523367](images/web_jekyll_00.png)
 
+<hr>
+
+## 기본 구조
+
+- https://jekyllrb-ko.github.io/docs/structure/
+
+```
+.
+├── _config.yml
+├── _data
+|   └── members.yml
+├── _drafts
+|   ├── begin-with-the-crazy-ideas.md
+|   └── on-simplicity-in-technology.md
+├── _includes
+|   ├── footer.html
+|   └── header.html
+├── _layouts
+|   ├── default.html
+|   └── post.html
+├── _posts
+|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
+|   └── 2009-04-26-barcamp-boston-4-roundup.md
+├── _sass
+|   ├── _base.scss
+|   └── _layout.scss
+├── _site
+├── .jekyll-metadata
+└── index.html # 'index.md' 이어도 되지만 올바른 YAML 머리말이 필요합니다
+```
+
+#### 환경설정
+
+- root 디렉토리의 `_config.yml` 혹은 터미널에서 `jekyll`실행 시 플래그로 지정 가능
+- https://jekyllrb-ko.github.io/docs/configuration/

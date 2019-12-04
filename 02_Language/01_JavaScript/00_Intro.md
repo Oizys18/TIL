@@ -1,4 +1,4 @@
-# JavaScript
+# Intro
 
 - 새로운 언어를 배울 때?
   - 문법적 차이
