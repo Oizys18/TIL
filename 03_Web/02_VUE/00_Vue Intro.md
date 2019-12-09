@@ -1,6 +1,14 @@
 # Vue.js
 
-- https://kr.vuejs.org/v2/guide/index.html 
+- https://kr.vuejs.org/v2/guide/index.html
+
+## 정의
+
+- 사용자 인터페이스를 만들기 위한 **프로그레시브 프레임워크**
+- SPA 완벽 지원
+- 선언적 렌더링
+- 컴포넌트 시스템
+- 
 
 - [Vue.js 창작자 Evan You 인터뷰](http://blog.naver.com/PostView.nhn?blogId=fastcampus&logNo=220969253285&refer=개발자스럽다)
 
@@ -41,56 +49,15 @@
 
 - 기존의 MTV 모델
 
-![image-20191104133751924](C:\Users\student\AppData\Roaming\Typora\typora-user-images\image-20191104133751924.png)
-
 - 기존의 MTV 모델과 달리, Vue에서는 View와 Model이 하나로 묶임
-
-![image-20191104131735794](C:\Users\student\AppData\Roaming\Typora\typora-user-images\image-20191104131735794.png)
 
 -  https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=ko 
   - Vue 크롬 extensions : Vue 디버깅 가능! 
 
 - 템플릿 안에서는 최대한 계산/연산을 줄이고, 인스턴스(특히 메소드)에서 모든 연산을 끝내고 값만 주는게 제일 좋다. (convention)
 
-- `Declarative Programming` 선언형 프로그래밍(== Descriptive Programming)
 
-  - 내가 만드려는 것을 묘사하면 자동으로 만들어주는 것
-
-  - `Reactive Programming ` : 데이터 변화에 반응 (자동 적용/반영)
-  - `Responsive Programming` : device 화면크기에 반응
-
-## Browser storage
-
-`Application - storage`
-
-- `session storage `
-  - 브라우저가 켜진 상태까지만 지속되는 저장소
-  - ex) 로그인 정보, 
-- `local storage`
-  - 브라우저가 닫혀도 지속되는 저장소
-
-### LocalStorage API
-
-- localStorage는 string으로 저장하기 때문에 데이터 처리를 해야 합니다.
-  - 저장할 때 : JSON.stringify 
-  - 읽을 때 : JSON.parse
-
-```javascript
-// Create
-localStorage.setItem('key','value')
-
-// Read
-localStorage.getItem('key')
-
-// Update
-localStorage.setItem('existingKey','newValue')
-
-// Delete
-localStorage.removeItem('key')
-
-// Count
-localStorage.length
-```
+<hr>
 
 ## 기본 문법
 
@@ -142,36 +109,7 @@ const app = new Vue({
 <p v-show></p>
 ```
 
-
-
-## Vue-CLI
-
-- `Django-admin` 처럼 `Vue`를 CLI에서 조작 가능 
-- npm을 이용한 설치 (`yarn`사용 가능) 
-
-  - 전역: ` npm install -g @vue/cli `
-  - 프로젝트 단위  -  default 
-    - `vue --version`
-- 프로젝트 디렉토리 생성
-  -  `vue init <template-name> <project-name>`
-    vue init webpack my-project 
-  - ` vue create todo-vue-cli`
-  - ?  Your connection to the default npm registry seems to be slow.
-    Use https://registry.npm.taobao.org for faster installation? Yes
-    - 미국에서 제작했기 때문에 중국 타오바오 서버를 통해 빠른 속도로 만들어줌 - `Yes`
-  - preset은 `default`
-- 프로젝트 톺아보기
-
-  - `babel.config.js`
-    - 오래된 브라우저가 새로운 언어/기능을 이해못하면 자동으로 번역(?)해줌 
-
-  - `package.json`
-    - 프로젝트에서 사용되는 패키지들 관련 정보
-  - `node_modules`
-    - 실제 패키지
-- 위와 같이 실제 프로젝트에 필요한 데이터는 많은데 (88mb..) 실제 배포 시에는 `build`를 통해 컴파일한다.
-
-  - 그래서 만약 다른 사람의 코드를 받아서 사용하려면 처음 저장 후 `npm install`해야함 
+<hr>
 
 #  00_vuejs_intro
 
@@ -303,8 +241,6 @@ const app = new Vue({
     ```
 
 이후 method에서 조건 추가한 function 적용한다.
-    ```
-    
 
 - `select`
 
@@ -317,8 +253,6 @@ const app = new Vue({
           <option value="completed">완료</option>
         </select>
     ```
-
-    
 
 - `v-for`의 `id` 필수적으로 bind할 id를 줘야함 : Vue에서 개별 DOM 노드들을 추적하고 기존 엘리먼트를 재사용, 재정렬하기 위해서 `v-for`의 각 항목들에 고유한 key 속성을 제공해야 합니다. `key`에 대한 이상적인 값은 각 항목을 식별할 수 있는 고유한 ID입니다. 이 특별한 속성은 1.x 버전의 `track-by`와 거의 비슷하지만 속성처럼 작동하기 때문에 `v-bind`를 사용하여 동적 값에 바인딩 해야합니다. (여기서는 약어를 이용합니다.)
 
@@ -365,7 +299,7 @@ const app = new Vue({
         },
     ```
 
-## 02_vue_practice.html
+<hr>
 
 # 01_vuejs_component
 

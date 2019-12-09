@@ -421,10 +421,42 @@ $ git config --global --credential.helper
 * 관리자 권한 필요
 ```
 
-- can't find repository <~~~>
+- can't find remote repository <~~~>
 
 ```
 - credential error : config에 저장된 id 값이 해당 원격저장소를 볼 수 있는 권한이 없음
-
 ```
+
+- Git can't detect local changes, can't add
+
+  - possible solution 1: https://stackoverflow.com/questions/16993082/why-doesnt-git-recognize-that-my-file-has-been-changed-therefore-git-add-not-w/24316479
+
+  ```
+  git update-index --no-assume-unchanged path/to/file
+  # If that doesn't help a reset may be enough for other weird cases.
+  
+  # In practice I found removing the cached file and resetting it to work:
+  
+  git rm --cached path/to/file
+  git reset path/to/file
+  ```
+
+  - possible solution 2: https://stackoverflow.com/questions/10759034/git-ignoring-a-directory-its-like-it-doesnt-exist
+
+  ```
+  # 실제로 해결한 방법, cache를 삭제하고 commit, add 한다.
+  
+  git rm --cached a/b/c
+  git commit -m "removed phantom a/b/c dir"
+  git add a/b/c
+  git commit -m "finally able to add a/b/c"
+  ```
+
+  - possible solution 3: `.gitignore`
+
+  ```
+  # gitignore 파일에 해당 디렉토리가 추가되어있을 수도 있다. 확인하고 수정할 것 
+  ```
+
+  
 

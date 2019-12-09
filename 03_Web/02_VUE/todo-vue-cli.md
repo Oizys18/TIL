@@ -74,6 +74,3 @@ export default {
 </script>
 ```
 
-## style
-
-- 이 앱에서는 사용 안함
