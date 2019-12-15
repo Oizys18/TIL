@@ -27,10 +27,19 @@
 ## Dictionary : 용어 모음
 
 - `저장소 (Repositary)`: 작업자가 변경한 모든 내용을 추적하는 공간 
-
 -  `작업 트리 (Working Tree)` : 저장소를 어느 한 시점을 바라보는 작업자의 현재 시점이다.
 - `master`: 생성/복사한 원격 저장소 HEAD의 지역 브랜치
 - `origin`: git이 복사해 온 저장소를 가리키기 위해 사용하는 default 이름 
+
+## Git setting
+
+- `git log`용 graph alias 세팅
+
+```
+$ git config --global alias.lg "log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold red)%h%C(reset) : %C(bold green)(%ar)%C(reset) - %C(cyan)<%an>%C(reset)%C(bold yellow)%d%C(reset)%n%n%w(90,1,2)%C(white)%B%C(reset)%n'"
+```
+
+- `git lg` 입력 시 커밋이력을 그래프 형태로 이쁘게 보여준다. 
 
 ## Basic Control : 명령어 모음
 
