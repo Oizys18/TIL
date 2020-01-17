@@ -38,20 +38,14 @@ https://ko.reactjs.org/
 
 ### 준비사항
 
-- 세가지 방법 중 상황에 맞춰 한가지를 택한다.
+- 상황에 맞춰 한가지를 택한다.
 
 - https://ko.reactjs.org/docs/add-react-to-a-website.html
 
-1. 기존 웹사이트에 React 사용
 
-   - 압축 CDN
+#### 기존 웹사이트에 React 사용
 
-   ```html
-   <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
-   <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
-   ```
-
-2. 기존 웹사이트에서 JSX를 통해 React 사용
+1. 기존 웹사이트에서 JSX를 통해 React 사용
 
    - JSX CDN
 
@@ -62,7 +56,7 @@ https://ko.reactjs.org/
    - 이후 `<script>` 태그에서 `type="text/babel"` 추가 시 JSX 사용 가능
    - 단, 이 방법은 사이트를 느리게 만들고 **프로덕션에서는 맞지 않다.** 공부/데모 사이트만을 위해 사용
 
-3. 프로젝트에 JSX 추가하기
+2. 프로젝트에 JSX 추가하기
 
    a. `Node.js` 설치
 
@@ -71,8 +65,24 @@ https://ko.reactjs.org/
    - `$ npm init -y`
    - `$ npm install babel-cli@6 babel-preset-react-app@3`
 
-4. JSX 전처리기 실행
+3. JSX 전처리기 실행
 
    - `src` 폴더 생성
    - `$ npx babel --watch src --out-dir . --presets react-app/prod ` 
    - 자동화된 JSX 감시기가 실행된다.
+
+#### CDN 링크 사용
+   - 압축 CDN
+
+   ```html
+   <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+   <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+   ```
+
+#### React App 생성 
+- Single page application을 생성한다.
+```javascript
+npx create-react-app my-app
+cd my-app
+npm start
+```
