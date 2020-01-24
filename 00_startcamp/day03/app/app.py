@@ -74,8 +74,11 @@ def lotto():
 def kospi():
     url = "https://finance.naver.com/sise/"
     response = requests.get(url).text
+    print(response)
     document = bs4.BeautifulSoup(response, 'html.parser')
-    kospi = document.select_one('#KOSPI_now').text
+    kospi = document.select_one('#KOSDAQ_now').text
+    li_1 = [] 
+    li_i.append(i)
     return "현재 코스피 지수는 : " + kospi
 
 #task8, 새해 
@@ -94,5 +97,10 @@ def newyear():
 # task9, index
 @app.route("/index")
 def index():
-    return "<html><head></head><body><h1>홈페이지</h1><p>이건내용</p></body></html>"
+    # import requests
+    # from pprint import pprint as pp
+    response = requests.get(url="https://api.thecatapi.com/v1/images/search")
+    urls = response.json()[0]['url']
+
+    return f"<html><head></head><body><img src={urls}></body></html>"
     #html로 씀
