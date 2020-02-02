@@ -18,6 +18,7 @@
 
 - 00_Python
 - 01_Javascript
+- 02_Java
 
 ## 03_Web
 
@@ -25,9 +26,13 @@
 - 01_Django
 - 02_VUEJS
 - 03_Jekyll
+- 04_React
 
 ## DOCS
-
+- Git 
+- NPM
+- temporary notes 
+  
 ## Coding Practice Plan
 
 - Python 
@@ -47,7 +52,9 @@
 ```
 
 - Javascript (Node.js)
-
+```
+1. Chanu CLI resume npm 배포
+```
 ### 사용해본 API
 
 ```
