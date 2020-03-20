@@ -5,6 +5,7 @@
 - Pakckage : 모듈(프로그램보다는 조금 작은 단위)
 - Manager : 관리자
 - 즉, Node.js로 만들어진  package(module)을 관리해주는 툴
+- 이제 github가 구매했다...
 
 ## 명령어 모음
 - `npm install 모듈`: 모듈 설치
