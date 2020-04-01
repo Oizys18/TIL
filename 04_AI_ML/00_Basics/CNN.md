@@ -1,5 +1,19 @@
 # CNN
 
+<<<<<<< HEAD
+=======
+## 참고
+
+- https://www.youtube.com/watch?v=9fldE3-yJpg&list=PLQ28Nx3M4Jrguyuwg4xe9d9t2XE639e5C&index=34
+- https://excelsior-cjh.tistory.com/152?category=940399
+- https://untitledtblog.tistory.com/150
+- https://thebook.io/006958/
+- https://excelsior-cjh.tistory.com/79?category=1013831
+- https://devkihyun.github.io/study/Machine-learining-and-Probability/
+
+
+
+>>>>>>> 97702a728b52f42f5ae369d0af5e53eb2b45cc6c
 ## 개요
 
 - 이미지분류에서 가장 빈번히 사용됨
@@ -9,6 +23,7 @@
 
 ## CNN의 구조
 
+<<<<<<< HEAD
 - 합성곱 계층 + 풀링 계층 + 완전연결계층 으로 구성 
 - 합성곱 계층은 이미지에 필터링 기법이 적용하고, 풀링 계층은 이미지의 국소적인 부분들을 하나의 대표적인 스칼라 값으로 변환함으로써 이미지의 크기를 줄이는 등의 다양한 기능들을 수행한다.
 - (2D 컨볼루션의 경우) 2차원 평면 행렬에서 지정한 영역의 값들을 하나의 값으로 압축하는 것.
@@ -18,6 +33,13 @@
 	일반적인 인공신경망은 fully-connected 연산과 ReLU와 같은 비선형 활성 함수 (nonlinear activation function)의 합성으로 정의된 계층을 여러 층 쌓은 구조이다.
 	CNN은 합성곱 계층 (convolutional layer)과 풀링 계층 (pooling layer)이라고 하는 새로운 층을 fully-connected 계층 이전에 추가함으로써 원본 이미지에 필터링 기법을 적용한 뒤에 필터링된 이미에 대해 분류 연산이 수행되도록 구성된다. 이러한 계층이 얼마나 많이, 어떠한 방식으로 쌓느냐에 따라 성능차이와 풀 수 있는 문제의 종류가 달라진다.
 ```
+=======
+- 일반적인 인공신경망은 fully-connected 연산과 ReLU와 같은 비선형 활성 함수 (nonlinear activation function)의 합성으로 정의된 계층을 여러 층 쌓은 구조이다.
+
+- CNN은 합성곱 계층 (convolutional layer)과 풀링 계층 (pooling layer)이라고 하는 새로운 층을 fully-connected 계층 이전에 추가함으로써 원본 이미지에 필터링 기법을 적용한 뒤에 필터링된 이미에 대해 분류 연산이 수행되도록 구성된다.
+
+- 합성곱 계층은 이미지에 필터링 기법이 적용하고, 풀링 계층은 이미지의 국소적인 부분들을 하나의 대표적인 스칼라 값으로 변환함으로써 이미지의 크기를 줄이는 등의 다양한 기능들을 수행한다.
+>>>>>>> 97702a728b52f42f5ae369d0af5e53eb2b45cc6c
 
 ## 합성곱 계층 Convolutional Layer
 
@@ -38,6 +60,7 @@
 
 - CNN에서 합성곱 계층과 ReLU와 같은 비선형 활성 함수를 거쳐서 생성된 이미지는 풀링 계층에 입력된다. 풀링 계층은 주로 max-pooling을 기반으로 구현된다. 
 
+<<<<<<< HEAD
 
 
 
@@ -52,3 +75,5 @@
 - https://thebook.io/006958/
 - https://excelsior-cjh.tistory.com/79?category=1013831
 - https://devkihyun.github.io/study/Machine-learining-and-Probability/
+=======
+>>>>>>> 97702a728b52f42f5ae369d0af5e53eb2b45cc6c
