@@ -43,3 +43,22 @@ localStorage.length
 
   - `Reactive Programming ` : 데이터 변화에 반응 (자동 적용/반영)
   - `Responsive Programming` : device 화면크기에 반응
+
+
+
+## 멈추지 않고 기다리기(Non-blocking)와 비동기(Asynchronous) 그리고 동시성(Concurrency)
+https://tech.peoplefund.co.kr/2017/08/02/non-blocking-asynchronous-concurrency.html
+
+## Event Loop
+
+## Bundler 
+
+## Framework
+
+## Architecture
+
+## SSR(Server Side Rendering) vs CSR(Client Side Rendering)
+- https://blog.martinwork.co.kr/devops/2019/05/24/server-side-rendering01.html
+- https://medium.com/aha-official/%EC%95%84%ED%95%98-%ED%94%84%EB%A1%A0%ED%8A%B8-%EA%B0%9C%EB%B0%9C%EA%B8%B0-1-spa%EC%99%80-ssr%EC%9D%98-%EC%9E%A5%EB%8B%A8%EC%A0%90-%EA%B7%B8%EB%A6%AC%EA%B3%A0-nuxt-js-cafdc3ac2053
+- https://brownbears.tistory.com/411
+## SPA vs MPA
