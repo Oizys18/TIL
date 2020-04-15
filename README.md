@@ -23,10 +23,11 @@
 ## 03_Web
 
 - 00_HTML & CSS
-- 01_Django
-- 02_VUEJS
-- 03_Jekyll
-- 04_React
+- 01_Web Frameworks
+  - 01_Django
+  - 02_VUEJS
+  - 03_Jekyll
+  - 04_React
 
 ## DOCS
 - Git 
