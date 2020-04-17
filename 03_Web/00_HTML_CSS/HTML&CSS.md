@@ -162,6 +162,8 @@ justify-content-center
 ## CSS
 
 ### CSS 명시도
+-- https://iamdaeyun.tistory.com/entry/Lesson-7-CSS-%EC%82%AC%EC%9A%A9%EC%8B%9C-%EB%B0%98%EB%93%9C%EC%8B%9C-%EC%95%8C%EC%95%84%EC%95%BC-%ED%95%A0%EA%B2%83-%EB%AA%85%EC%8B%9C%EB%8F%84
+ 
 #### Cascading 우선순위
 - Inline Style > !importnat > id > class > tag 
 - 쉼표로 구분된 4개의 숫자로 표현가능 
