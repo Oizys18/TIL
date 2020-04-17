@@ -1,7 +1,7 @@
 # HTML/CSS
 
 ## HTML
-
+ㅊ
 ### Bootstrap feedback
 
 ```css
@@ -161,7 +161,24 @@ justify-content-center
 
 ## CSS
 
-- CSS 7단위
+### CSS 명시도
+#### Cascading 우선순위
+- Inline Style > !importnat > id > class > tag 
+- 쉼표로 구분된 4개의 숫자로 표현가능 
+  - Inline, Id, Class, Tag(element)  : 0,0,0,0  
+  ```
+  div ul li : 요소가 3개이므로 0,0,0,3
+  div.abcDEF ul li : 클래스 1개와 요소3개. 0,0,1,3
+  a:hover : 가상클래스 1개, 요소1개. 0,0,1,1
+  div.navb a:hover : 클래스 1개, 가상클래스 1개, 요소 2개. 0,0,2,2
+  #navbar em : id 1개, 요소 1개. 0,1,0,1
+  h2#navi em : id 1개, 요소 2개. 0,1,0,2
+  ```
+- 명시도 레벨이 높으면 우선순위가 높다.
+- Override : 문서 구조는 평가되지 않는다. 같은 우선도를 지닌 스타일이 중복되면 가장 나중에 선언된 것이 적용된다.
+- Inline style : 인라인 선언이 우선적용된다.
+
+### CSS 7단위
 
 ```
 출처: https://webclub.tistory.com/356
