@@ -2,23 +2,21 @@
 
 ## GIT (!= github)
 
--  Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+- Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
 - VCS (Version Control System)
 
 - Git branching GUI Study: https://learngitbranching.js.org/
--  https://git-scm.com/docs?source=post_page-----c25b421ecdbd----------------------
+- https://git-scm.com/docs?source=post_page-----c25b421ecdbd----------------------
 
 ### git workflow
 
 ```
 1. working tree에서 작업(코드작성)
 2. staging area로 add
-3. local repository로 commit 
+3. local repository로 commit
 4. remote repository가 있다면 push
 ```
-
-
 
 ![views](https://wayhome25.github.io/assets/post-img/git/git.png)
 
@@ -26,10 +24,10 @@
 
 ## Dictionary : 용어 모음
 
-- `저장소 (Repositary)`: 작업자가 변경한 모든 내용을 추적하는 공간 
--  `작업 트리 (Working Tree)` : 저장소를 어느 한 시점을 바라보는 작업자의 현재 시점이다.
+- `저장소 (Repositary)`: 작업자가 변경한 모든 내용을 추적하는 공간
+- `작업 트리 (Working Tree)` : 저장소를 어느 한 시점을 바라보는 작업자의 현재 시점이다.
 - `master`: 생성/복사한 원격 저장소 HEAD의 지역 브랜치
-- `origin`: git이 복사해 온 저장소를 가리키기 위해 사용하는 default 이름 
+- `origin`: git이 복사해 온 저장소를 가리키기 위해 사용하는 default 이름
 
 ## Git setting
 
@@ -39,7 +37,7 @@
 $ git config --global alias.lg "log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold red)%h%C(reset) : %C(bold green)(%ar)%C(reset) - %C(cyan)<%an>%C(reset)%C(bold yellow)%d%C(reset)%n%n%w(90,1,2)%C(white)%B%C(reset)%n'"
 ```
 
-- `git lg` 입력 시 커밋이력을 그래프 형태로 이쁘게 보여준다. 
+- `git lg` 입력 시 커밋이력을 그래프 형태로 이쁘게 보여준다.
 
 ## Basic Control : 명령어 모음
 
@@ -48,8 +46,8 @@ $ git config --global alias.lg "log --graph --abbrev-commit --decorate --date=re
 #### -`init`
 
 ```bash
-# git initiation, Git start  
-$ git init <path> 
+# git initiation, Git start
+$ git init <path>
 ```
 
 #### -`config`
@@ -57,11 +55,11 @@ $ git init <path>
 ```bash
 # USER 설정을 하지 않으면 commit후 remote push해도 user가 ?로 나타나고 commit count도 변하지 않는다...
 
-# 전역 사용자명/이메일 구성하기 
+# 전역 사용자명/이메일 구성하기
 $ git config --global user.name “<name>”
 $ git config --global user.email “<email>”
 
-# 저장소별 사용자명/이메일 구성 
+# 저장소별 사용자명/이메일 구성
 $ git config user.name “<name>”
 $ git config user.email “<email>”
 ```
@@ -69,8 +67,8 @@ $ git config user.email “<email>”
 #### -`status`
 
 ```bash
-# git 저장소 상태 목록 (working tree, staging area, 변경사항) 
-$ git status 
+# git 저장소 상태 목록 (working tree, staging area, 변경사항)
+$ git status
 ```
 
 ### 2. 로그 확인
@@ -87,16 +85,16 @@ $ git log -n
 # 변경사항 보여주는 패치와 함께 커밋 이력 표시
 $ git log -p
 
-# 기간/시간 내의 커밋 로그만 확인 
+# 기간/시간 내의 커밋 로그만 확인
 $ git log --since "< time >"
-				 
+
 # 기간/시간 이전의 커밋 로그 확인
 $ git log --before "< time >"
 				   # "1 month"
 				   # "5 hours"
 				   # "5 days"
-				   
-# 두 지점 사이의 커밋 로그 확인: 커밋명, 브랜치명 태그명 등 사용가능 
+
+# 두 지점 사이의 커밋 로그 확인: 커밋명, 브랜치명 태그명 등 사용가능
 $ git log <start> ... <end>
 
 # 각 항목의 로그 한줄씩 출력
@@ -106,20 +104,20 @@ $ git log --pretty=oneline
 git log -C -C -p -1 <특정 지점>
 ```
 
-####  - `diff` 
+#### - `diff`
 
 ```bash
 # 현재 작업 트리와 인덱스의 차이점 확인
-$ git diff 
+$ git diff
 
 # 인덱스와 저장소의 차이점 확인
 $ git diff --cached
 
 # 작업트리와 저장소의 차이점 확인
-$ git diff HEAD 
+$ git diff HEAD
 
 # 두 지점 사이의 차이점 확인
-$ git diff <start> end 
+$ git diff <start> end
 ```
 
 #### - `blame`
@@ -140,16 +138,16 @@ $ git blame -C -C <파일>
 #### - `add`
 
 ```bash
-# 새로운 파일 추가 / 존재하는 파일 스테이징 
+# 새로운 파일 추가 / 존재하는 파일 스테이징
 $ git add <file>
 
-# 파일의 일부만 스테이징 
+# 파일의 일부만 스테이징
 $ git add -p [<file>[<file>[<file> ... ]]]
 
-# Git 대화모드를 사용하여 파일 추가 
-$ git add -i 
+# Git 대화모드를 사용하여 파일 추가
+$ git add -i
 
-# 수정 및 추적되는 파일의 변경사항 스테이징 
+# 수정 및 추적되는 파일의 변경사항 스테이징
 $ git add -u [<path>[<path>]]
 ```
 
@@ -197,10 +195,10 @@ $ git cherry-pick -n <commit>
 #### - `merge`
 
 ```bash
-# 현재 브랜치에서 다른 브랜치와의 diff를 확인하고 합친다. 
-$ git checkout <끌어올 브랜치> 
+# 현재 브랜치에서 다른 브랜치와의 diff를 확인하고 합친다.
+$ git checkout <끌어올 브랜치>
 $ git merge <따라갈 브랜치>
-$ git push 
+$ git push
 
 # 커밋하지 않고 합치기
 $ git merge --no-commit <branch>
@@ -230,15 +228,15 @@ $ git branch -a
 
 # 브랜치 삭제
 	# 삭제할 브랜치가 현재 브랜치에 합쳐졌을 경우
-	$ git branch -d <branch>   
-	
-	# 삭제할 브랜치가 현재 브랜치에 합쳐지지 않았어도 삭제 
+	$ git branch -d <branch>
+
+	# 삭제할 브랜치가 현재 브랜치에 합쳐지지 않았어도 삭제
 	$ git branch -D <branch>
-	
-# 현재 브랜치에서 새로운 브랜치 생성 
+
+# 현재 브랜치에서 새로운 브랜치 생성
 $ git branch <new branch>
 
-# 현재 브랜치에서 새로운 브랜치 생성하고 체크아웃하기 
+# 현재 브랜치에서 새로운 브랜치 생성하고 체크아웃하기
 $ git branch -b <new branch>
 
 # 다른 시작지점에서 브랜치 생성하기
@@ -267,7 +265,7 @@ $ git clone --depth 200
 $ git remote add <custom repo name> <repo url>
 
 # 원격 저장소 목록 출력
-$ git remote -v 
+$ git remote -v
 
 # 원격 저장소에서 쓸모가 없어진 원격 브랜치 제거하기
 $ git remote prune <remote repo>
@@ -285,11 +283,11 @@ $ git push <remote repo> <local branch>:<remote branch>
 # 지역 브랜치를 동일한 이름의 원격 브랜치에 푸싱하기
 $ git push <remote repo> <local branch>
 
-# ex) origin 브랜치를 master 브랜치로 푸싱한다. 
+# ex) origin 브랜치를 master 브랜치로 푸싱한다.
 $ git push origin master
 
 # 특정 브랜치에 정의된 remote repository가 있다면(기본 원격 원점이 사용된다)
-$ git push 
+$ git push
 ```
 
 #### - `pull`
@@ -315,19 +313,19 @@ $ git fetch <remote repo>
 #### - `rm`
 
 ```bash
-기본적으로 파일 삭제 -> commit 해야함 
+기본적으로 파일 삭제 -> commit 해야함
 
-1. Untracked 파일 삭제 
+1. Untracked 파일 삭제
 - 일반적 bash 파일 삭제, rm -rf 사용
 
-2. Tracked 파일 삭제 
+2. Tracked 파일 삭제
 2-1. 로컬 디렉토리와 git 저장소에서 모두 삭제
-$ git rm <filename> 
+$ git rm <filename>
 $ git commit -m 'Delete reason'
 
-2-2. 로컬에서는 삭제하지 않지만 git에서는 삭제 
+2-2. 로컬에서는 삭제하지 않지만 git에서는 삭제
 # (git add로 커밋하지 말아야할 파일을 커밋했을 경우)
-# 이 방법 사용하면 로컬에서는 파일 유지, 저장소에서만 파일 삭제 가능 
+# 이 방법 사용하면 로컬에서는 파일 유지, 저장소에서만 파일 삭제 가능
 $ git rm --cached <filename>
 $ git commit -m 'Delete reason'
 
@@ -335,7 +333,7 @@ $ git commit -m 'Delete reason'
 # -f 변경사항을 커밋하지 않았을 경우 강제로 삭제
 $ git rm -f <filename>
 
-# -r 디렉토리 삭제 
+# -r 디렉토리 삭제
 $ git rm -r <directory name>
 ```
 
@@ -346,57 +344,80 @@ $ git rm -r <directory name>
 
 ```
 # 폴더 생성 후 git 시작
-$ git init . 
+$ git init .
 
-# git 환경 체크 
-$ ls .git        
+# git 환경 체크
+$ ls .git
 
-# local git configuration 확인 
-$ cat .git/config            #refs 폴더 속 git의 해쉬 존재 
+# local git configuration 확인
+$ cat .git/config            #refs 폴더 속 git의 해쉬 존재
 
-$ git status 
+$ git status
 ```
 
 - 협업 중 문제 발생시 : Issue
 
 ```
-Issues에 추가 가능, 태그도 달 수 있다. 
+Issues에 추가 가능, 태그도 달 수 있다.
 ```
 
 ### Case 1
 
 ```
-- 동일 파일 동시작업 X 
+- 동일 파일 동시작업 X
 
-1. 작업 시간을 나눈다    or   2. 작업 폴더(파일)을 나눈다. 
+1. 작업 시간을 나눈다    or   2. 작업 폴더(파일)을 나눈다.
 ```
 
 ```
-git pull하기 전, 
-항상 
+git pull하기 전,
+항상
 $ git add ~
 $ git commit -m '~'
-하자 
+하자
 
 ```
 
-- 만약 다른 파일을 push 해서 conflict 생겼을 때, 
+- 만약 다른 파일을 push 해서 conflict 생겼을 때,
 
 ```
-VIM이 자동으로 open됨 
-- esc 
-$ :wq 
-$ git pull  
+VIM이 자동으로 open됨
+- esc
+$ :wq
+$ git pull
 
-Auto merge된다! 
-: 즉, 같은 파일을 수정하지 않으면 됨 
+Auto merge된다!
+: 즉, 같은 파일을 수정하지 않으면 됨
 ```
 
-- 결론 : 같은 시간대에, 같은 파일을 수정하지 말자! 
+- 결론 : 같은 시간대에, 같은 파일을 수정하지 말자!
+
 
 ## ERROR handling
 
-- `git warning: CRLF will be replaced by LF `
+- `error: unable to resolve reference refs/remotes/origin/split-css: No such file or directory`
+- https://stackoverflow.com/questions/2998832/git-pull-fails-unable-to-resolve-reference-unable-to-update-local-ref
+- `git gc`: https://www.git-scm.com/docs/git-gc#git-gc---pruneltdategt
+```
+error: unable to resolve reference refs/remotes/origin/LT558-optimize-sql: No such file or directory
+From git+ssh://remoteserver/~/misk5
+ ! [new branch]      LT558-optimize-sql -> origin/LT558-optimize-sql  (unable to update local ref)
+error: unable to resolve reference refs/remotes/origin/split-css: No such file or directory
+ ! [new branch]      split-css  -> origin/split-css  (unable to update local ref)
+```
+```
+오류: git pull 명령어 입력시 error: unable to resolve reference ~ 등의 에러문이 나오며 git pull 실패
+원인: 로컬 저장소에 불필요한 파일이 많거나 정리가 필요해서 (?)
+해결: 
+$ git gc --prune=now
+$ git remote prune origin
+$ git pull
+```
+
+
+
+
+- `git warning: CRLF will be replaced by LF`
 
 ```
 https://blog.jaeyoon.io/2018/01/git-crlf.html
@@ -410,23 +431,23 @@ https://blog.jaeyoon.io/2018/01/git-crlf.html
 $ git config --global core.autocrlf true
 ```
 
-- `remote: HTTP Basic: Access denied `
+- `remote: HTTP Basic: Access denied`
 
 ```
 오류 : gitlab repository에서 local로 clone하던 중 에러발생
 원인 : clone 시 계정 입력 패스워드 잘못 입력
-해결 : git bash 관리자 권한에서 명령어 입력 
-$ git config --system --unset credential.helper 
+해결 : git bash 관리자 권한에서 명령어 입력
+$ git config --system --unset credential.helper
 ```
 
-- Git clone/push : `fatal : autentication error` 
+- Git clone/push : `fatal : autentication error`
 
 ```
-- credential error : config 저장된 id/pw가 맞지 않음 
+- credential error : config 저장된 id/pw가 맞지 않음
 
-해결: 
+해결:
 $ git config --global --credential.helper
-- credential 정보를 리셋해주는 코드 
+- credential 정보를 리셋해주는 코드
 * 관리자 권한 필요
 ```
 
@@ -443,9 +464,9 @@ $ git config --global --credential.helper
   ```
   git update-index --no-assume-unchanged path/to/file
   # If that doesn't help a reset may be enough for other weird cases.
-  
+
   # In practice I found removing the cached file and resetting it to work:
-  
+
   git rm --cached path/to/file
   git reset path/to/file
   ```
@@ -454,7 +475,7 @@ $ git config --global --credential.helper
 
   ```
   # 실제로 해결한 방법, cache를 삭제하고 commit, add 한다.
-  
+
   git rm --cached a/b/c
   git commit -m "removed phantom a/b/c dir"
   git add a/b/c
@@ -464,8 +485,5 @@ $ git config --global --credential.helper
   - possible solution 3: `.gitignore`
 
   ```
-  # gitignore 파일에 해당 디렉토리가 추가되어있을 수도 있다. 확인하고 수정할 것 
+  # gitignore 파일에 해당 디렉토리가 추가되어있을 수도 있다. 확인하고 수정할 것
   ```
-
-  
-
