@@ -392,30 +392,7 @@ Auto merge된다!
 
 - 결론 : 같은 시간대에, 같은 파일을 수정하지 말자!
 
-
 ## ERROR handling
-
-- `error: unable to resolve reference refs/remotes/origin/split-css: No such file or directory`
-- https://stackoverflow.com/questions/2998832/git-pull-fails-unable-to-resolve-reference-unable-to-update-local-ref
-- `git gc`: https://www.git-scm.com/docs/git-gc#git-gc---pruneltdategt
-```
-error: unable to resolve reference refs/remotes/origin/LT558-optimize-sql: No such file or directory
-From git+ssh://remoteserver/~/misk5
- ! [new branch]      LT558-optimize-sql -> origin/LT558-optimize-sql  (unable to update local ref)
-error: unable to resolve reference refs/remotes/origin/split-css: No such file or directory
- ! [new branch]      split-css  -> origin/split-css  (unable to update local ref)
-```
-```
-오류: git pull 명령어 입력시 error: unable to resolve reference ~ 등의 에러문이 나오며 git pull 실패
-원인: 로컬 저장소에 불필요한 파일이 많거나 정리가 필요해서 (?)
-해결: 
-$ git gc --prune=now
-$ git remote prune origin
-$ git pull
-```
-
-
-
 
 - `git warning: CRLF will be replaced by LF`
 
@@ -487,3 +464,19 @@ $ git config --global --credential.helper
   ```
   # gitignore 파일에 해당 디렉토리가 추가되어있을 수도 있다. 확인하고 수정할 것
   ```
+
+- `error: RPC failed; curl transfer closed with outstanding read data remaining`
+- https://stackoverflow.com/questions/38618885/error-rpc-failed-curl-transfer-closed-with-outstanding-read-data-remaining
+
+```
+원인: git pull, 혹은 git clone 중 remote 데이터의 용량이 너무 크거나 인터넷 속도가 너무 느려서 버퍼를 감당하지 못하기 때문.
+해결:
+1. shallow clone 후 unshallow fetch를 통해 두번에 나눠 데이터를 가져온다.
+$ git clone http://github.com/large-repository --depth 1
+$ cd large-repository
+$ git fetch --unshallow
+
+2. 버퍼 사이즈를 증가시킨다
+$ git config --global http.postBuffer 524288000
+
+```
