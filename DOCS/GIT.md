@@ -479,4 +479,7 @@ $ git fetch --unshallow
 2. 버퍼 사이즈를 증가시킨다
 $ git config --global http.postBuffer 524288000
 
+회고: AI 프로젝트 진행중, backend의 데이터와 학습시킨 모델의 용량이 너무 커진 나머지 git clone이 안되어서 생긴 문제였다.
+애초에 처음부터 하나의 local 깃 저장소에서 작업하면 발생하지 않는다.
+
 ```
