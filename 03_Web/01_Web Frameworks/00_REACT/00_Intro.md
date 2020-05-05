@@ -20,7 +20,7 @@ https://ko.reactjs.org/
 #### 2. 컴포넌트 기반
 
 - 스스로 상태를 관리
-- 템플릿이 아닌 Javascript로 작성 
+- 템플릿이 아닌 Javascript로 작성
 - DOM과 별개로 상태관리 가능
 
 #### 3. 재사용성
@@ -41,7 +41,6 @@ https://ko.reactjs.org/
 - 상황에 맞춰 한가지를 택한다.
 
 - https://ko.reactjs.org/docs/add-react-to-a-website.html
-
 
 #### 기존 웹사이트에 React 사용
 
@@ -68,21 +67,85 @@ https://ko.reactjs.org/
 3. JSX 전처리기 실행
 
    - `src` 폴더 생성
-   - `$ npx babel --watch src --out-dir . --presets react-app/prod ` 
+   - `$ npx babel --watch src --out-dir . --presets react-app/prod`
    - 자동화된 JSX 감시기가 실행된다.
 
 #### CDN 링크 사용
-   - 압축 CDN
 
-   ```html
-   <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
-   <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
-   ```
+- 압축 CDN
 
-#### React App 생성 
+```html
+<script
+  src="https://unpkg.com/react@16/umd/react.production.min.js"
+  crossorigin
+></script>
+<script
+  src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
+  crossorigin
+></script>
+```
+
+#### React App 생성
+
 - Single page application을 생성한다.
+
 ```javascript
 npx create-react-app my-app
 cd my-app
 npm start
 ```
+
+## VS Code 추천 익스텐션
+- 김신재님 참고
+
+1. **ES7 React/Redux/GraphQL/React-Native snippets**
+
+   React 개발한다면 그냥 국룰.
+
+   ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/696b2e78-69d1-46ae-89b4-e10f5d45eedf/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/696b2e78-69d1-46ae-89b4-e10f5d45eedf/Untitled.png)
+
+2. **Reactjs code snippets**
+
+   얘도 그냥 국룰. **ES7 React/Redux/GraphQL/React-Native snippets** 서브.
+
+   ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/737bccb9-6c56-41b4-8ab2-ecca8711cdc5/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/737bccb9-6c56-41b4-8ab2-ecca8711cdc5/Untitled.png)
+
+3. **JS JSX Snippets**
+
+   얘도 서브. JSX 문법 자동완성 안되면 이것도 설치.
+
+   ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2989623a-8a40-48f3-9a0c-d1ff9e5f8a5d/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2989623a-8a40-48f3-9a0c-d1ff9e5f8a5d/Untitled.png)
+
+4. **ESLint**
+
+   JS 개발한다면 그냥 국룰.
+
+   ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/541ecb1c-df5a-482a-bedf-5c7b72220579/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/541ecb1c-df5a-482a-bedf-5c7b72220579/Untitled.png)
+
+5. **JavaScript (ES6) code snippets**
+
+   ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7258b86e-f458-4fe8-97b0-e345a6c0070b/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7258b86e-f458-4fe8-97b0-e345a6c0070b/Untitled.png)
+
+6. **Debugger for Chrome**
+
+   구글 크롬과 통합된 디버깅 환경을 제공하는 익스텐션
+
+   ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2185f02c-a91b-4743-882d-7aab5336657b/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2185f02c-a91b-4743-882d-7aab5336657b/Untitled.png)
+
+7. **vscode-styled-components**
+
+   이거는 디자인할 때, 일반적인 css나 scss 대신 styled-components를 사용한다면 쓰기 좋은거.
+
+   ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/98c11f8a-da37-4431-b3cd-12e6f12e575e/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/98c11f8a-da37-4431-b3cd-12e6f12e575e/Untitled.png)
+
+---
+
+## +α) 구글 확장 프로그램
+
+- **React Developer Tools**
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a3f0f849-ea59-4525-b692-1cd4490d51fc/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a3f0f849-ea59-4525-b692-1cd4490d51fc/Untitled.png)
+
+  _react_ 컴포넌트 구조와 `props`, `state`를 크롬 DevTools에서 확인할 수 있게 해준다.
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ab527d36-ed8a-40e9-ab9c-01f52884fb31/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ab527d36-ed8a-40e9-ab9c-01f52884fb31/Untitled.png)
