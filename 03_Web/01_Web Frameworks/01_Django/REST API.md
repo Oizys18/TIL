@@ -14,14 +14,6 @@ https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html
 
 
 
-
-
-
-
-
-
-
-
 ### Music : Comment == 1 : N
 
 ```python
@@ -41,3 +33,5 @@ U			PUT		/musics/:pk/comments/:pk
 D			DELETE	/musics/:pk/comments/:pk
 ```
 
+
+## 프론트 엔드가 신경 안쓸 수 있게 만들자..

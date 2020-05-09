@@ -1775,12 +1775,5 @@ https://ko.gravatar.com/
         
         class Meta(ArtistSerializer.Meta):
             fields = ArtistSerializer.Meta.fields + ('music_set',)
+    
     ```
-
-    ​	
-
-
-## POSTMAN
-
-- https://www.getpostman.com/downloads/
-
