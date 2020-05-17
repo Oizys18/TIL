@@ -62,3 +62,23 @@ https://tech.peoplefund.co.kr/2017/08/02/non-blocking-asynchronous-concurrency.h
 - https://medium.com/aha-official/%EC%95%84%ED%95%98-%ED%94%84%EB%A1%A0%ED%8A%B8-%EA%B0%9C%EB%B0%9C%EA%B8%B0-1-spa%EC%99%80-ssr%EC%9D%98-%EC%9E%A5%EB%8B%A8%EC%A0%90-%EA%B7%B8%EB%A6%AC%EA%B3%A0-nuxt-js-cafdc3ac2053
 - https://brownbears.tistory.com/411
 ## SPA vs MPA
+
+
+
+
+
+## 에러핸들링 
+```
+There might be a problem with the project dependency tree.
+It is likely not a bug in Create React App, but something you need to fix locally.
+
+The react-scripts package provided by Create React App requires a dependency:
+
+  "webpack": "3.10.0"
+
+Don't try to install it manually: your package manager does it automatically.
+However, a different version of webpack was detected higher up in the tree:
+```
+- react-start-app으로 생성한 프로젝트를 `yarn start` 하려고 했을 때 발생.
+- webpack 버전의 문제지만, yarn이 함께 제시한 방법을 모두 사용해봐도 해결 불가했음
+- `.env`를 root에 생성후 `SKIP_PREFLIGHT_CHECK=true`를 추가하면 해결된다. 
