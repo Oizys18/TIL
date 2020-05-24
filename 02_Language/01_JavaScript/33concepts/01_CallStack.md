@@ -1,4 +1,6 @@
-# 01_CallStack
+# JS 33 concepts - Callstack
+
+execution stack == program stack == control stack == run-time stack == machine stack == call stack 
 
 - https://velog.io/@jakeseo_me/2019-03-15-2303-%EC%9E%91%EC%84%B1%EB%90%A8-rmjta5a3xh
 - original source of this posting is from https://medium.com/@gaurav.pandvia/understanding-javascript-function-executions-tasks-event-loop-call-stack-more-part-1-5683dea1f5ec If the original author requests deletion, it will be deleted immediately.
