@@ -32,14 +32,7 @@
 - 멀티 프로세스의 방식의 프로그램에서 하나의 프로세스가 자신의 데이터 공간을 망가뜨린다면 그것은 해당 프로세스의 중단을 낳게 될 것이다. 하지만 멀티 스레드 방식의 프로그램에서는 하나의 스레드가 자신이 사용하던 데이터 공간을 망가뜨린다면 그 결과는 하나의 데이터 공간을 공유하는 모든 스레드를 작동불능 상태로 만들어 버릴 것이다. 이러한 문제에 대비하기 위해 Critical Section 기법이 존재한다.
 
 
-Ref.
-
+### 참고
 http://divineprocess.tistory.com/entry/Multi-Thread-구축
-
 http://karlsenchoi.blogspot.kr/2011/02/blog-post_23.html
-
 http://m.blog.naver.com/rja1104/220551216367
-
-
-
-출처: https://you9010.tistory.com/136 [uujing의 블로그]****
