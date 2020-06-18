@@ -23,6 +23,15 @@
 - 따라서 위와 같은 컴퓨터 자원 낭비를 줄이기 위해 `REACT`는 real DOM의 추상화 개념을 활용한 새로운 DOM을 사용하는데, 이것이 `Virtual DOM` 이다.
 - Real DOM과 비교했을 때 Virtual DOM은 동적이며, 생명주기가 존재하며, 특히 SPA 웹 앱을 개발할 때 훨씬 더 좋은 성능을 발휘한다. (단, 만약 Dynamic UI 웹 앱이 아닌 이전 트렌드의 웹 앱같은 경우 일반 DOM의 성능이 더 좋다.)
 
+## OSI 7 layer
+- 참고:  https://shlee0882.tistory.com/110
+
+
+
+
+
+
+
 
 ## Browser storage
 `Application - storage`
@@ -89,14 +98,19 @@ https://tech.peoplefund.co.kr/2017/08/02/non-blocking-asynchronous-concurrency.h
 - 프로젝트 코드 규칙이 이미 정해져있고, 그것에 따라 코드를 작성해야한다면 Framework 
 - 단, 최근 모호해지는 경향이 있다. (ex - React) 
 
-## Architecture
-
 ## SSR(Server Side Rendering) vs CSR(Client Side Rendering)
 - https://blog.martinwork.co.kr/devops/2019/05/24/server-side-rendering01.html
 - https://medium.com/aha-official/%EC%95%84%ED%95%98-%ED%94%84%EB%A1%A0%ED%8A%B8-%EA%B0%9C%EB%B0%9C%EA%B8%B0-1-spa%EC%99%80-ssr%EC%9D%98-%EC%9E%A5%EB%8B%A8%EC%A0%90-%EA%B7%B8%EB%A6%AC%EA%B3%A0-nuxt-js-cafdc3ac2053
 - https://brownbears.tistory.com/411
+
+
+## Heading Space
+
+
 ## SPA vs MPA
 
+
+## Architecture
 
 
 
