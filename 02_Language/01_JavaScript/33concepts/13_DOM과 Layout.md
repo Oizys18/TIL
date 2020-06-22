@@ -1,4 +1,4 @@
-# DOM과 Layout
+# 13_DOM과 Layout
 
 ## DOM(Document Object Model) 문서 객체 모델
 

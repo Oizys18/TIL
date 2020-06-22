@@ -1,4 +1,4 @@
-# JS 33 concepts - Value and Reference
+# 03_Value and Reference
 
 - 자바스크립트는 메모리에 있는 데이터 구조의 전체 접근 권한을 주지 않는다. 대신 언어 차원의 reference type을 제공한다.
 - 모든 변수가 생성된 후에 고정된 양의 메모리가 할당됩니다.

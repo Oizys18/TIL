@@ -1,4 +1,4 @@
-# JS 33 concepts - Primitive Types
+# 02_Primitive Types
 
 ## 원시자료형 
 

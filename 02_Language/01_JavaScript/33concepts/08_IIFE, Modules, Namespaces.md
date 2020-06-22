@@ -1,4 +1,4 @@
-# IIFE, Modules, Namespaces
+# 08_IIFE, Modules, Namespaces
 
 ## IIFE  (Immediately Invoked Function Expression)
 - 익명의 클로저를 통해 "privacy"를 제공하는 설계 패턴

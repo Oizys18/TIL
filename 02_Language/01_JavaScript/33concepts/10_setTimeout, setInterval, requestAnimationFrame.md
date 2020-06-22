@@ -1,4 +1,5 @@
-# Scheduling 
+# 10_setTimeout, setInterval, requestAnimationFrame
+## Scheduling 
 
 - 함수가 즉시 실행되지 않고 특정 시간에 실행되도록 결정하는 것. ( == `scheduling a call`)
 

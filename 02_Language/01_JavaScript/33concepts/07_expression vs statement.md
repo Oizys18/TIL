@@ -1,4 +1,4 @@
-# 식(expression) vs 문(statement)
+# 07_expression vs statement
 
 - 표현식expression: 단 하나의 Value(값)을 반환하는 코드
 - 구문statement: 행동을 수행 (값이 기대되지 않음)
