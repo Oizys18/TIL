@@ -1,4 +1,4 @@
-# :pencil:Today I Learned 19.07.13 ~
+# :pencil:Today I Learned
 
 ![](https://img.shields.io/badge/created__at-19.07.13-yellow.svg) ![](https://img.shields.io/badge/updated__at-20.06.30-blue.svg)
 
