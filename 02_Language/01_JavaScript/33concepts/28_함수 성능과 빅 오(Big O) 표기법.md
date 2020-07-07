@@ -85,7 +85,7 @@ const fib = (num) => {
 
 ## 시간복잡도 및 성능표 
 
-![1594078403516](../../../images/02_Language/big-o-graph.PNG)
+![1594078403516](https://github.com/Oizys18/TIL/blob/master/images/02_Language/big-o-graph.png?raw=true)
 
 ###  Big O 표기와 입력 데이터 크기에 따른 성능
 
