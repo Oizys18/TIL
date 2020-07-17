@@ -13,10 +13,14 @@
   - 데이터베이스
   - 디자인패턴
   - 알고리즘
+
+
 - Part 2. Language
   - Java
   - JavaScript
   - Python
+
+
 - Part 3. 분야별 정리
   - FrontEnd
   - iOS
