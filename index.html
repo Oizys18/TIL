@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>토마토 품종 백과사전</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-icon">🍅</div>
+      <h1>토마토 품종 백과사전</h1>
+      <p class="hero-subtitle">세계의 다양한 토마토 품종을 만나보세요</p>
+      <a href="#varieties" class="hero-btn">품종 살펴보기</a>
+    </div>
+  </header>
+
+  <!-- Search & Filter -->
+  <section class="filter-section">
+    <div class="container">
+      <div class="search-wrap">
+        <input type="text" id="searchInput" placeholder="🔍  품종 이름으로 검색..." />
+      </div>
+      <div class="filter-tags">
+        <button class="tag active" data-filter="all">전체</button>
+        <button class="tag" data-filter="small">소형</button>
+        <button class="tag" data-filter="medium">중형</button>
+        <button class="tag" data-filter="large">대형</button>
+        <button class="tag" data-filter="unique">희귀 품종</button>
+        <button class="tag" data-filter="korean">국내 품종</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Varieties Grid -->
+  <main id="varieties" class="varieties-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>주요 토마토 품종</h2>
+        <p>전 세계에서 재배되는 대표적인 토마토 품종을 소개합니다</p>
+      </div>
+      <div class="grid" id="varietyGrid">
+
+        <!-- 방울 토마토 -->
+        <article class="card" data-category="small" data-name="방울 토마토">
+          <div class="card-emoji">🍅</div>
+          <div class="card-badge badge-small">소형</div>
+          <h3>방울 토마토</h3>
+          <p class="latin">Solanum lycopersicum var. cerasiforme</p>
+          <p class="desc">새끼손가락 한 마디 크기의 귀여운 토마토. 당도가 높고 수분이 풍부해 간식으로 즐겨 먹는다. 한국에서 가장 대중적인 품종 중 하나.</p>
+          <div class="card-info">
+            <span>🌡 당도 <strong>8~10°Bx</strong></span>
+            <span>📏 크기 <strong>2~3cm</strong></span>
+            <span>🎨 색상 <strong>선홍색</strong></span>
+          </div>
+          <div class="card-tags">
+            <span class="tag-item">간식용</span>
+            <span class="tag-item">고당도</span>
+            <span class="tag-item">초보 재배 가능</span>
+          </div>
+        </article>
+
+        <!-- 체리 토마토 -->
+        <article class="card" data-category="small" data-name="체리 토마토">
+          <div class="card-emoji">🍒</div>
+          <div class="card-badge badge-small">소형</div>
+          <h3>체리 토마토</h3>
+          <p class="latin">Solanum lycopersicum 'Cherry'</p>
+          <p class="desc">체리처럼 동그랗고 새콤달콤한 맛이 특징. 샐러드와 요리 장식에 자주 사용된다. 컬러 품종(황색·오렌지·자색)도 다양하다.</p>
+          <div class="card-info">
+            <span>🌡 당도 <strong>7~9°Bx</strong></span>
+            <span>📏 크기 <strong>2~4cm</strong></span>
+            <span>🎨 색상 <strong>다양</strong></span>
+          </div>
+          <div class="card-tags">
+            <span class="tag-item">샐러드</span>
+            <span class="tag-item">다채로운 색상</span>
+            <span class="tag-item">새콤달콤</span>
+          </div>
+        </article>
+
+        <!-- 대저 토마토 -->
+        <article class="card" data-category="korean" data-name="대저 토마토">
+          <div class="card-emoji">🌸</div>
+          <div class="card-badge badge-korean">국내 품종</div>
+          <h3>대저 토마토</h3>
+          <p class="latin">부산 대저 지역 특산</p>
+          <p class="desc">부산 강서구 대저동의 특산물. 짭조름한 토양에서 자라 독특한 단맛과 짭짤한 맛이 공존한다. 2~4월이 제철로 선물용으로도 인기가 높다.</p>
+          <div class="card-info">
+            <span>🌡 당도 <strong>9~12°Bx</strong></span>
+            <span>📏 크기 <strong>3~5cm</strong></span>
+            <span>🎨 색상 <strong>분홍·주황</strong></span>
+          </div>
+          <div class="card-tags">
+            <span class="tag-item">지리적 표시제</span>
+            <span class="tag-item">짭짤달콤</span>
+            <span class="tag-item">겨울 제철</span>
+          </div>
+        </article>
+
+        <!-- 완숙 토마토 -->
+        <article class="card" data-category="medium" data-name="완숙 토마토">
+          <div class="card-emoji">🍅</div>
+          <div class="card-badge badge-medium">중형</div>
+          <h3>완숙 토마토</h3>
+          <p class="latin">Solanum lycopersicum 'Ripe'</p>
+          <p class="desc">충분히 익혀 빨갛게 숙성된 일반 토마토. 리코펜 함량이 높아 건강식으로 각광받는다. 생식보다 가열 조리 시 영양 흡수율이 더 높다.</p>
+          <div class="card-info">
+            <span>🌡 당도 <strong>5~7°Bx</strong></span>
+            <span>📏 크기 <strong>6~8cm</strong></span>
+            <span>🎨 색상 <strong>진홍색</strong></span>
+          </div>
+          <div class="card-tags">
+            <span class="tag-item">고리코펜</span>
+            <span class="tag-item">요리용</span>
+            <span class="tag-item">건강식</span>
+          </div>
+        </article>
+
+        <!-- 로마 토마토 -->
+        <article class="card" data-category="medium" data-name="로마 토마토">
+          <div class="card-emoji">🫙</div>
+          <div class="card-badge badge-medium">중형</div>
+          <h3>로마 토마토</h3>
+          <p class="latin">Solanum lycopersicum 'Roma'</p>
+          <p class="desc">이탈리아 요리의 핵심 재료. 수분이 적고 과육이 두꺼워 소스·페이스트·통조림 가공에 최적화된 품종이다. 페스타리아나라고도 불린다.</p>
+          <div class="card-info">
+            <span>🌡 당도 <strong>6~8°Bx</strong></span>
+            <span>📏 크기 <strong>7~9cm</strong></span>
+            <span>🎨 색상 <strong>진적색</strong></span>
+          </div>
+          <div class="card-tags">
+            <span class="tag-item">소스용</span>
+            <span class="tag-item">이탈리안</span>
+            <span class="tag-item">저수분</span>
+          </div>
+        </article>
+
+        <!-- 산 마르자노 -->
+        <article class="card" data-category="medium" data-name="산 마르자노 토마토">
+          <div class="card-emoji">🍕</div>
+          <div class="card-badge badge-medium">중형</div>
+          <h3>산 마르자노 토마토</h3>
+          <p class="latin">Solanum lycopersicum 'San Marzano'</p>
+          <p class="desc">나폴리 피자의 정통 소스에 반드시 사용되는 품종. 길쭉한 모양에 씨가 적고 단맛이 강하다. EU 원산지 보호 인증(PDO)을 받은 명품 토마토.</p>
+          <div class="card-info">
+            <span>🌡 당도 <strong>8~10°Bx</strong></span>
+            <span>📏 크기 <strong>7~10cm</strong></span>
+            <span>🎨 색상 <strong>밝은 적색</strong></span>
+          </div>
+          <div class="card-tags">
+            <span class="tag-item">PDO 인증</span>
+            <span class="tag-item">피자 소스</span>
+            <span class="tag-item">이탈리아 명품</span>
+          </div>
+        </article>
+
+        <!-- 비프스테이크 토마토 -->
+        <article class="card" data-category="large" data-name="비프스테이크 토마토">
+          <div class="card-emoji">🥩</div>
+          <div class="card-badge badge-large">대형</div>
+          <h3>비프스테이크 토마토</h3>
+          <p class="latin">Solanum lycopersicum 'Beefsteak'</p>
+          <p class="desc">무게가 500g~1kg에 달하는 초대형 토마토. 과육이 풍성하고 육즙이 가득해 햄버거·샌드위치에 통째로 슬라이스해 사용한다.</p>
+          <div class="card-info">
+            <span>🌡 당도 <strong>4~6°Bx</strong></span>
+            <span>📏 크기 <strong>10~15cm</strong></span>
+            <span>🎨 색상 <strong>선홍색</strong></span>
+          </div>
+          <div class="card-tags">
+            <span class="tag-item">초대형</span>
+            <span class="tag-item">샌드위치</span>
+            <span class="tag-item">육즙 풍부</span>
+          </div>
+        </article>
+
+        <!-- 블랙 크림 -->
+        <article class="card" data-category="unique" data-name="블랙 크림 토마토">
+          <div class="card-emoji">🖤</div>
+          <div class="card-badge badge-unique">희귀 품종</div>
+          <h3>블랙 크림 토마토</h3>
+          <p class="latin">Solanum lycopersicum 'Black Krim'</p>
+          <p class="desc">크림반도 원산의 에어룸 품종. 짙은 자주·갈색 빛을 띠며 스모키하고 복잡한 풍미가 특징이다. 안토시아닌 함량이 높아 항산화 효능도 뛰어나다.</p>
+          <div class="card-info">
+            <span>🌡 당도 <strong>6~8°Bx</strong></span>
+            <span>📏 크기 <strong>8~12cm</strong></span>
+            <span>🎨 색상 <strong>자주·갈색</strong></span>
+          </div>
+          <div class="card-tags">
+            <span class="tag-item">에어룸</span>
+            <span class="tag-item">고안토시아닌</span>
+            <span class="tag-item">스모키 풍미</span>
+          </div>
+        </article>
+
+        <!-- 그린 제브라 -->
+        <article class="card" data-category="unique" data-name="그린 제브라 토마토">
+          <div class="card-emoji">🟢</div>
+          <div class="card-badge badge-unique">희귀 품종</div>
+          <h3>그린 제브라 토마토</h3>
+          <p class="latin">Solanum lycopersicum 'Green Zebra'</p>
+          <p class="desc">익어도 초록색을 유지하며 연한 황색 줄무늬가 들어간 독특한 외관. 상큼하고 신맛이 강해 고급 레스토랑의 플레이팅에 자주 활용된다.</p>
+          <div class="card-info">
+            <span>🌡 당도 <strong>5~7°Bx</strong></span>
+            <span>📏 크기 <strong>5~8cm</strong></span>
+            <span>🎨 색상 <strong>초록·황줄무늬</strong></span>
+          </div>
+          <div class="card-tags">
+            <span class="tag-item">에어룸</span>
+            <span class="tag-item">독특한 외관</span>
+            <span class="tag-item">레스토랑용</span>
+          </div>
+        </article>
+
+        <!-- 옐로우 페어 -->
+        <article class="card" data-category="small" data-name="옐로우 페어 토마토">
+          <div class="card-emoji">🍐</div>
+          <div class="card-badge badge-small">소형</div>
+          <h3>옐로우 페어 토마토</h3>
+          <p class="latin">Solanum lycopersicum 'Yellow Pear'</p>
+          <p class="desc">배(pear) 모양의 노란 미니 토마토. 산도가 낮고 부드러운 단맛이 있어 어린이들이 특히 좋아한다. 화분 재배나 텃밭 가꾸기에 적합하다.</p>
+          <div class="card-info">
+            <span>🌡 당도 <strong>7~9°Bx</strong></span>
+            <span>📏 크기 <strong>3~4cm</strong></span>
+            <span>🎨 색상 <strong>밝은 노랑</strong></span>
+          </div>
+          <div class="card-tags">
+            <span class="tag-item">배 모양</span>
+            <span class="tag-item">저산도</span>
+            <span class="tag-item">텃밭 재배</span>
+          </div>
+        </article>
+
+        <!-- 분홍 토마토 -->
+        <article class="card" data-category="large" data-name="핑크 토마토">
+          <div class="card-emoji">🌷</div>
+          <div class="card-badge badge-large">대형</div>
+          <h3>분홍 토마토 (桃太郞)</h3>
+          <p class="latin">Solanum lycopersicum 'Momotaro'</p>
+          <p class="desc">일본에서 개발된 '모모타로' 품종. 분홍빛 껍질에 과육이 단단하고 단맛이 강하다. 국내에서도 '분홍 토마토'로 유통되며 선물 세트에 많이 포함된다.</p>
+          <div class="card-info">
+            <span>🌡 당도 <strong>7~9°Bx</strong></span>
+            <span>📏 크기 <strong>8~10cm</strong></span>
+            <span>🎨 색상 <strong>분홍</strong></span>
+          </div>
+          <div class="card-tags">
+            <span class="tag-item">고당도</span>
+            <span class="tag-item">선물용</span>
+            <span class="tag-item">단단한 과육</span>
+          </div>
+        </article>
+
+        <!-- 스트로베리 토마토 -->
+        <article class="card" data-category="unique" data-name="스트로베리 토마토">
+          <div class="card-emoji">🍓</div>
+          <div class="card-badge badge-unique">희귀 품종</div>
+          <h3>스트로베리 토마토</h3>
+          <p class="latin">Physalis peruviana (꽈리류)</p>
+          <p class="desc">얇은 껍질(husk)에 싸인 황금빛 작은 열매. 엄밀히는 토마토와 같은 가지과이지만 별도 속(屬). 열대 과일 향이 나며 디저트·잼으로 활용도가 높다.</p>
+          <div class="card-info">
+            <span>🌡 당도 <strong>10~13°Bx</strong></span>
+            <span>📏 크기 <strong>1~2cm</strong></span>
+            <span>🎨 색상 <strong>황금색</strong></span>
+          </div>
+          <div class="card-tags">
+            <span class="tag-item">초고당도</span>
+            <span class="tag-item">디저트</span>
+            <span class="tag-item">이색 품종</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Nutrition Section -->
+  <section class="nutrition-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>토마토의 영양 성분</h2>
+        <p>토마토 100g 기준 주요 영양 정보</p>
+      </div>
+      <div class="nutrition-grid">
+        <div class="nut-card">
+          <div class="nut-icon">🔴</div>
+          <h4>리코펜</h4>
+          <p>강력한 항산화 물질. 익힐수록 흡수율이 높아지며 전립선암 예방에 도움을 준다는 연구 결과가 있다.</p>
+        </div>
+        <div class="nut-card">
+          <div class="nut-icon">🟠</div>
+          <h4>비타민 C</h4>
+          <p>100g당 약 20mg. 면역력 강화와 콜라겐 합성에 필수적인 영양소.</p>
+        </div>
+        <div class="nut-card">
+          <div class="nut-icon">🟡</div>
+          <h4>베타카로틴</h4>
+          <p>체내에서 비타민 A로 전환. 눈 건강과 피부 보호에 중요한 역할을 한다.</p>
+        </div>
+        <div class="nut-card">
+          <div class="nut-icon">🟢</div>
+          <h4>칼륨</h4>
+          <p>100g당 약 237mg. 혈압 조절을 돕고 나트륨 배출을 촉진한다.</p>
+        </div>
+        <div class="nut-card">
+          <div class="nut-icon">🔵</div>
+          <h4>엽산</h4>
+          <p>세포 분열과 DNA 합성에 필수. 임산부에게 특히 권장되는 영양소.</p>
+        </div>
+        <div class="nut-card">
+          <div class="nut-icon">🟣</div>
+          <h4>저칼로리</h4>
+          <p>100g당 약 18kcal. 수분 함량이 94%에 달해 다이어트 식품으로도 인기가 높다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Growing Tips -->
+  <section class="tips-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>토마토 재배 팁</h2>
+      </div>
+      <div class="tips-list">
+        <div class="tip-item">
+          <span class="tip-num">01</span>
+          <div>
+            <h4>충분한 햇빛</h4>
+            <p>하루 최소 6~8시간 직사광선이 필요합니다. 일조량이 부족하면 당도가 떨어집니다.</p>
+          </div>
+        </div>
+        <div class="tip-item">
+          <span class="tip-num">02</span>
+          <div>
+            <h4>적절한 물주기</h4>
+            <p>토양 표면이 마르면 충분히 주되, 과습은 뿌리 썩음의 원인이 됩니다. 아침에 물주기를 권장합니다.</p>
+          </div>
+        </div>
+        <div class="tip-item">
+          <span class="tip-num">03</span>
+          <div>
+            <h4>지지대 설치</h4>
+            <p>열매가 달리면 줄기가 무거워집니다. 초기부터 지지대를 세워 줄기를 보호하세요.</p>
+          </div>
+        </div>
+        <div class="tip-item">
+          <span class="tip-num">04</span>
+          <div>
+            <h4>순지르기(곁순 제거)</h4>
+            <p>잎과 줄기 사이에 돋는 곁순을 제거하면 에너지가 열매에 집중되어 더 크고 달콤하게 자랍니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>🍅 토마토 품종 백과사전 &nbsp;|&nbsp; 정보 제공 목적으로 제작된 샘플 사이트입니다</p>
+    <p class="footer-sub">Solanum lycopersicum — 전 세계 1만여 가지 이상의 품종이 존재합니다</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
